@@ -9,22 +9,24 @@ import AppRoutes from "../Routes/Routes";
 import Sidebar from "../Sidebar/Sidebar";
 
 const App = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getCategories());
-        dispatch(getProducts());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(getCategories());
+    dispatch(getProducts());
+  }, [dispatch]);
 
-    return <div className="app">
-        <Header/>
-        <div className="container">
-            <Sidebar/>
-            <AppRoutes />
-        </div>
-        
-        <Footer/>
-    </div>;
-}
- 
+  return (
+    <div className="app">
+      <Header />
+      <div className="container">
+        <Sidebar />
+        <AppRoutes />
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
 export default App;
